@@ -15,7 +15,10 @@ public class EmpresaDAO {
 	public int adiciona(Empresa empresa) {
 		PreparedStatement ps;
 		int codigoRetorno = 0;
+		
+		
 		try (Connection conn = new FabricaDeConexoes().getConnection()) {
+			
 			ps = (PreparedStatement) conn.prepareStatement(
 
 					"insert into empresa (cnpj, nomeDaEmpresa, nomeFantasia, endereco, telefone) values(?,?,?,?,?)");
