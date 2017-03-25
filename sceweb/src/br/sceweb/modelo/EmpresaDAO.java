@@ -72,4 +72,9 @@ public class EmpresaDAO {
 
 	}
 
+	public Empresa consultaEmpresa(String cnpj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
