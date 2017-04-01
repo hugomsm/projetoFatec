@@ -10,9 +10,19 @@ import com.mysql.jdbc.PreparedStatement;
 
 import br.sceweb.servico.FabricaDeConexoes;
 
+/**
+ */
 public class EmpresaDAO {
+	/**
+	 * Field logger.
+	 */
 	Logger logger = Logger.getLogger(EmpresaDAO.class);
 
+	/**
+	 * Method adiciona.
+	 * @param empresa Empresa
+	 * @return int
+	 */
 	public int adiciona(Empresa empresa) {
 		PreparedStatement ps;
 		int codigoRetorno = 0;
@@ -36,6 +46,11 @@ public class EmpresaDAO {
 		return codigoRetorno;
 	}
 
+	/**
+	 * Method exclui.
+	 * @param cnpj String
+	 * @return int
+	 */
 	public int exclui(String cnpj) {
 		java.sql.PreparedStatement ps;
 		int codigoretorno = 0;
@@ -50,6 +65,11 @@ public class EmpresaDAO {
 
 	}
 
+	/**
+	 * Method consultaEmpresa.
+	 * @param cnpj String
+	 * @return Empresa
+	 */
 	public static Empresa consultaEmpresa(String cnpj) {
 		Empresa empresa = null;
 		java.sql.PreparedStatement ps;

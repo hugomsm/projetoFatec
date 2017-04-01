@@ -7,8 +7,17 @@ import org.apache.log4j.Logger;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 
+/**
+ */
 public class FabricaDeConexoes {
+	/**
+	 * Field logger.
+	 */
 	Logger logger = Logger.getLogger(FabricaDeConexoes.class);
+	/**
+	 * Method getConnection.
+	 * @return Connection
+	 */
 	public Connection getConnection(){
 		String url = "jdbc:mysql://localhost/sceweb";
 		try {

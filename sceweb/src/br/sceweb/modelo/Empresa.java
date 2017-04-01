@@ -20,8 +20,9 @@ public class Empresa {
 	public String getCnpj() {
 		return cnpj;
 	}
-	/*
-	 * atribui o cnpj vefica se o cnpj é valido
+	/**
+	 * Method setCnpj atribui o cnpj vefica se o cnpj é valido
+	 * @param cnpj
 	 */
 	public void setCnpj(String cnpj)  {
 		if (isValido(cnpj)){

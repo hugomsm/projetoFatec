@@ -11,12 +11,24 @@ import org.junit.Test;
 import br.sceweb.modelo.Empresa;
 import br.sceweb.modelo.EmpresaDAO;
 
+/**
+ */
 public class UC02ConsultarEmpresa {
 
+	/**
+	 * Field empresa.
+	 */
 	static Empresa empresa = new Empresa();
 
+	/**
+	 * Field empresaDAO.
+	 */
 	static EmpresaDAO empresaDAO = new EmpresaDAO();
 
+	/**
+	 * Method setUpBeforeClass.
+	 * @throws Exception
+	 */
 	@BeforeClass
 
 	public static void setUpBeforeClass() throws Exception {
@@ -33,6 +45,9 @@ public class UC02ConsultarEmpresa {
 
 	}
 
+	/**
+	 * Method preCondicao_insereEmpresa.
+	 */
 	@Before
 
 	public void preCondicao_insereEmpresa() {
@@ -41,6 +56,9 @@ public class UC02ConsultarEmpresa {
 
 	}
 
+	/**
+	 * Method CT01UC02ConsultaEmpresa_cnpj_valido.
+	 */
 	@Test
 
 	public void CT01UC02ConsultaEmpresa_cnpj_valido() {
@@ -49,12 +67,19 @@ public class UC02ConsultarEmpresa {
 
 	}
 	
+	/**
+	 * Method CT02UC02ConsultaEmpresa_cnpj_invalido.
+	 */
 	@Test(expected = RuntimeException.class)
 	public void CT02UC02ConsultaEmpresa_cnpj_invalido() {
 		String cnpj = "219821";
 		EmpresaDAO.consultaEmpresa(cnpj);
 	}
 
+	/**
+	 * Method tearDown.
+	 * @throws Exception
+	 */
 	@After
 
 	public void tearDown() throws Exception {
