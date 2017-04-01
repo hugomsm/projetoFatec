@@ -57,7 +57,7 @@ public class UC01CadastrarEmpresa {
 		if((empresa.getCnpj().length()) != 14) {
 			throw new IllegalArgumentException();
 		} else {
-			empresaDAO.adiciona(empresa);
+			assertEquals(1,empresaDAO.adiciona(empresa));
 		}
 	}
 
