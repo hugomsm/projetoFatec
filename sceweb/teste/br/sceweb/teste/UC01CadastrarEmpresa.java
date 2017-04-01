@@ -53,11 +53,10 @@ public class UC01CadastrarEmpresa {
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void CT03UC01A3Cadastra_empresa_cnpj_invalido(){
-		empresa.setCnpj("21782178");
 		if((empresa.getCnpj().length()) != 14) {
 			throw new IllegalArgumentException();
 		} else {
-			assertEquals(1,empresaDAO.adiciona(empresa));
+			empresaDAO.adiciona(empresa);
 		}
 	}
 
